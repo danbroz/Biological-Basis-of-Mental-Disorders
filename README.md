@@ -194,3 +194,4 @@ This project is open source. Please ensure compliance with:
 ---
 
 *This project represents a novel approach to synthesizing mental health research using AI and semantic search technologies. The generated content should be used for educational and research purposes and not as a substitute for professional medical advice.*
+
