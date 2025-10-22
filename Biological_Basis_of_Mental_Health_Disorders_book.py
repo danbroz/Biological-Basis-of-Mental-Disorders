@@ -202,6 +202,7 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
 {papers_context}
 
 **COMPLETE REFERENCE LIST ({paper_count} papers - cite extensively):**
+**only cite the papers that are directly relevant to the chapter**
 
 {reference_list}
 
@@ -210,7 +211,6 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
     return prompt
 
 
-def generate_chapter_with_retry(prompt, max_retries=3):
     """
     Generate chapter with retry logic for rate limits and errors.
     

@@ -1,0 +1,153 @@
+Intellectual Developmental Disorder (Intellectual Disability)
+Language Disorder
+Speech Sound Disorder
+Childhood-Onset Fluency Disorder (Stuttering)
+Social (Pragmatic) Communication Disorder
+Autism Spectrum Disorder
+Attention-Deficit/Hyperactivity Disorder
+Specific Learning Disorder
+Developmental Coordination Disorder
+Stereotypic Movement Disorder
+Tourette's Disorder
+Persistent (Chronic) Motor or Vocal Tic Disorder
+Provisional Tic Disorder
+Delusional Disorder
+Brief Psychotic Disorder
+Schizophreniform Disorder
+Schizophrenia
+Schizoaffective Disorder
+Substance/Medication-Induced Psychotic Disorder
+Psychotic Disorder Due to Another Medical Condition
+Catatonic Disorder Due to Another Medical Condition
+Bipolar I Disorder
+Bipolar II Disorder
+Cyclothymic Disorder
+Substance/Medication-Induced Bipolar and Related Disorder
+Bipolar and Related Disorder Due to Another Medical Condition
+Disruptive Mood Dysregulation Disorder
+Major Depressive Disorder
+Persistent Depressive Disorder
+Premenstrual Dysphoric Disorder
+Substance/Medication-Induced Depressive Disorder
+Depressive Disorder Due to Another Medical Condition
+Separation Anxiety Disorder
+Selective Mutism
+Specific Phobia
+Social Anxiety Disorder
+Panic Disorder
+Agoraphobia
+Generalized Anxiety Disorder
+Substance/Medication-Induced Anxiety Disorder
+Anxiety Disorder Due to Another Medical Condition
+Obsessive-Compulsive Disorder
+Body Dysmorphic Disorder
+Hoarding Disorder
+Trichotillomania (Hair-Pulling Disorder)
+Excoriation (Skin-Picking) Disorder
+Substance/Medication-Induced Obsessive-Compulsive and Related Disorder
+Obsessive-Compulsive and Related Disorder Due to Another Medical Condition
+Reactive Attachment Disorder
+Disinhibited Social Engagement Disorder
+Posttraumatic Stress Disorder
+Acute Stress Disorder
+Adjustment Disorders
+Prolonged Grief Disorder
+Dissociative Identity Disorder
+Dissociative Amnesia
+Depersonalization/Derealization Disorder
+Somatic Symptom Disorder
+Illness Anxiety Disorder
+Functional Neurological Symptom Disorder (Conversion Disorder)
+Psychological Factors Affecting Other Medical Conditions
+Factitious Disorder
+Factitious Disorder Imposed on Another
+Rumination Disorder
+Avoidant/Restrictive Food Intake Disorder
+Anorexia Nervosa
+Bulimia Nervosa
+Binge-Eating Disorder
+Enuresis
+Encopresis
+Insomnia Disorder
+Hypersomnolence Disorder
+Narcolepsy
+Obstructive Sleep Apnea Hypopnea
+Central Sleep Apnea
+Sleep-Related Hypoventilation
+Circadian Rhythm Sleep-Wake Disorders
+Non–Rapid Eye Movement Sleep Arousal Disorders
+Nightmare Disorder
+Rapid Eye Movement Sleep Behavior Disorder
+Restless Legs Syndrome
+Substance/Medication-Induced Sleep Disorder
+Delayed Ejaculation
+Erectile Disorder
+Female Orgasmic Disorder
+Female Sexual Interest/Arousal Disorder
+Genito-Pelvic Pain/Penetration Disorder
+Male Hypoactive Sexual Desire Disorder
+Premature (Early) Ejaculation
+Substance/Medication-Induced Sexual Dysfunction
+Gender Dysphoria
+Oppositional Defiant Disorder
+Intermittent Explosive Disorder
+Conduct Disorder
+Pyromania
+Kleptomania
+Alcohol Use Disorder
+Alcohol Intoxication
+Alcohol Withdrawal
+Cannabis Use Disorder
+Cannabis Intoxication
+Cannabis Withdrawal
+Phencyclidine Use Disorder
+Other Hallucinogen Use Disorder
+Phencyclidine Intoxication
+Other Hallucinogen Intoxication
+Inhalant Use Disorder
+Inhalant Intoxication
+Opioid Use Disorder
+Opioid Intoxication
+Opioid Withdrawal
+Sedative, Hypnotic, or Anxiolytic Use Disorder
+Sedative, Hypnotic, or Anxiolytic Intoxication
+Stimulant Use Disorder
+Stimulant Intoxication
+Stimulant Withdrawal
+Tobacco Use Disorder
+Other (or Unknown) Substance Use Disorder
+Other (or Unknown) Substance Intoxication
+Other (or Unknown) Substance Withdrawal
+Delirium
+Major Neurocognitive Disorder
+Major or Mild Neurocognitive Disorder Due to Alzheimer's Disease
+Major or Mild Frontotemporal Neurocognitive Disorder
+Major or Mild Neurocognitive Disorder with Lewy Bodies
+Major or Mild Vascular Neurocognitive Disorder
+Major or Mild Neurocognitive Disorder Due to Traumatic Brain Injury
+Mild Neurocognitive Disorder
+Major or Mild Neurocognitive Disorder Due to HIV Infection
+Major or Mild Neurocognitive Disorder Due to Prion Disease
+Major or Mild Neurocognitive Disorder Due to Parkinson's Disease
+Major or Mild Neurocognitive Disorder Due to Huntington's Disease
+Major or Mild Neurocognitive Disorder Due to Another Medical Condition
+Major or Mild Neurocognitive Disorder Due to Multiple Etiologies
+Paranoid Personality Disorder
+Schizoid Personality Disorder
+Schizotypal Personality Disorder
+Antisocial Personality Disorder
+Borderline Personality Disorder
+Histrionic Personality Disorder
+Narcissistic Personality Disorder
+Avoidant Personality Disorder
+Dependent Personality Disorder
+Obsessive-Compulsive Personality Disorder
+Personality Change Due to Another Medical Condition
+Voyeuristic Disorder
+Exhibitionistic Disorder
+Frotteuristic Disorder
+Sexual Masochism Disorder
+Sexual Sadism Disorder
+Pedophilic Disorder
+Fetishistic Disorder
+Transvestic Disorder

@@ -1,0 +1,1416 @@
+{
+  "completed_chapters": [
+    "acute_stress_disorder",
+    "adjustment_disorders",
+    "agoraphobia",
+    "alcohol_intoxication",
+    "alcohol_use_disorder",
+    "alcohol_withdrawal",
+    "anorexia_nervosa",
+    "antisocial_personality_disorder",
+    "anxiety_disorder_due_to_another_medical_condition",
+    "autism_spectrum_disorder",
+    "avoidant_personality_disorder",
+    "binge_eating_disorder",
+    "bipolar_and_related_disorder_due_to_another_medical_condition",
+    "bipolar_i_disorder",
+    "bipolar_ii_disorder",
+    "body_dysmorphic_disorder",
+    "borderline_personality_disorder",
+    "brief_psychotic_disorder",
+    "bulimia_nervosa",
+    "cannabis_intoxication",
+    "cannabis_use_disorder",
+    "cannabis_withdrawal",
+    "catatonic_disorder_due_to_another_medical_condition",
+    "central_sleep_apnea",
+    "childhood_onset_fluency_disorder_stuttering",
+    "circadian_rhythm_sleep_wake_disorders",
+    "compulsive_and_related_disorder",
+    "conduct_disorder",
+    "cyclothymic_disorder",
+    "delayed_ejaculation",
+    "delirium",
+    "delusional_disorder",
+    "dependent_personality_disorder",
+    "depressive_disorder_due_to_another_medical_condition",
+    "developmental_coordination_disorder",
+    "disinhibited_social_engagement_disorder",
+    "disruptive_mood_dysregulation_disorder",
+    "dissociative_amnesia",
+    "dissociative_identity_disorder",
+    "encopresis",
+    "enuresis",
+    "erectile_disorder",
+    "excoriation_skin_picking_disorder",
+    "exhibitionistic_disorder",
+    "factitious_disorder",
+    "factitious_disorder_imposed_on_another",
+    "female_orgasmic_disorder",
+    "fetishistic_disorder",
+    "frotteuristic_disorder",
+    "functional_neurological_symptom_disorder_conversion_disorder",
+    "gender_dysphoria",
+    "generalized_anxiety_disorder",
+    "histrionic_personality_disorder",
+    "hoarding_disorder",
+    "hypersomnolence_disorder",
+    "illness_anxiety_disorder",
+    "inhalant_intoxication",
+    "inhalant_use_disorder",
+    "insomnia_disorder",
+    "intellectual_developmental_disorder_intellectual_disability",
+    "intermittent_explosive_disorder",
+    "kleptomania",
+    "language_disorder",
+    "lewy_bodies",
+    "major_depressive_disorder",
+    "major_neurocognitive_disorder",
+    "major_or_mild_frontotemporal_neurocognitive_disorder",
+    "major_or_mild_neurocognitive_disorder_due_to_alzheimers_disease",
+    "major_or_mild_neurocognitive_disorder_due_to_another_medical_condition",
+    "major_or_mild_neurocognitive_disorder_due_to_hiv_infection",
+    "major_or_mild_neurocognitive_disorder_due_to_huntingtons_disease",
+    "major_or_mild_neurocognitive_disorder_due_to_multiple_etiologies",
+    "major_or_mild_neurocognitive_disorder_due_to_parkinsons_disease",
+    "major_or_mild_neurocognitive_disorder_due_to_prion_disease",
+    "major_or_mild_neurocognitive_disorder_due_to_traumatic_brain_injury",
+    "major_or_mild_vascular_neurocognitive_disorder",
+    "male_hypoactive_sexual_desire_disorder",
+    "mild_neurocognitive_disorder",
+    "narcissistic_personality_disorder",
+    "narcolepsy",
+    "nightmare_disorder",
+    "nonrapid_eye_movement_sleep_arousal_disorders",
+    "obsessive_compulsive_and_related_disorder_due_to_another_medical_condition",
+    "obsessive_compulsive_disorder",
+    "obsessive_compulsive_personality_disorder",
+    "obstructive_sleep_apnea_hypopnea",
+    "opioid_intoxication",
+    "opioid_use_disorder",
+    "opioid_withdrawal",
+    "oppositional_defiant_disorder",
+    "other_hallucinogen_intoxication",
+    "other_hallucinogen_use_disorder",
+    "other_or_unknown_substance_intoxication",
+    "other_or_unknown_substance_use_disorder",
+    "other_or_unknown_substance_withdrawal",
+    "panic_disorder",
+    "paranoid_personality_disorder",
+    "pedophilic_disorder",
+    "persistent_chronic_motor_or_vocal_tic_disorder",
+    "persistent_depressive_disorder",
+    "personality_change_due_to_another_medical_condition",
+    "phencyclidine_intoxication",
+    "phencyclidine_use_disorder",
+    "posttraumatic_stress_disorder",
+    "premature_early_ejaculation",
+    "premenstrual_dysphoric_disorder",
+    "prolonged_grief_disorder",
+    "provisional_tic_disorder",
+    "psychological_factors_affecting_other_medical_conditions",
+    "psychotic_disorder_due_to_another_medicalcondition",
+    "pyromania",
+    "rapid_eye_movement_sleep_behavior_disorder",
+    "reactive_attachment_disorder",
+    "restless_legs_syndrome",
+    "rumination_disorder",
+    "schizoaffective_disorder",
+    "schizoid_personality_disorder",
+    "schizophrenia",
+    "schizophreniform_disorder",
+    "schizotypal_personality_disorder",
+    "sedative_hypnotic_or_anxiolytic_intoxication",
+    "sedative_hypnotic_or_anxiolytic_use_disorder",
+    "selective_mutism",
+    "separation_anxiety_disorder",
+    "sexual_masochism_disorder",
+    "sexual_sadism_disorder",
+    "sleep_related_hypoventilation",
+    "social_anxiety_disorder",
+    "social_pragmatic_communication_disorder",
+    "somatic_symptom_disorder",
+    "specific_phobia",
+    "speech_sound_disorder",
+    "stereotypic_movement_disorder",
+    "stimulant_intoxication",
+    "stimulant_use_disorder",
+    "stimulant_withdrawal",
+    "tobacco_use_disorder",
+    "tourettes_disorder",
+    "transvestic_disorder",
+    "trichotillomania_hair_pulling_disorder",
+    "voyeuristic_disorder"
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "disorder": "Acute Stress Disorder",
+      "file": "acute_stress_disorder",
+      "paper_count": 2000,
+      "generation_time": 100.8182098865509,
+      "chapter_file": "book_chapters/001_acute_stress_disorder.md",
+      "timestamp": "2025-10-20T13:14:25.452421"
+    },
+    {
+      "number": 2,
+      "disorder": "Adjustment Disorders",
+      "file": "adjustment_disorders",
+      "paper_count": 2000,
+      "generation_time": 90.8104453086853,
+      "chapter_file": "book_chapters/002_adjustment_disorders.md",
+      "timestamp": "2025-10-20T13:16:02.293001"
+    },
+    {
+      "number": 3,
+      "disorder": "Agoraphobia",
+      "file": "agoraphobia",
+      "paper_count": 2000,
+      "generation_time": 97.65562558174133,
+      "chapter_file": "book_chapters/003_agoraphobia.md",
+      "timestamp": "2025-10-20T13:17:45.974969"
+    },
+    {
+      "number": 4,
+      "disorder": "Alcohol Intoxication",
+      "file": "alcohol_intoxication",
+      "paper_count": 2000,
+      "generation_time": 86.19795227050781,
+      "chapter_file": "book_chapters/004_alcohol_intoxication.md",
+      "timestamp": "2025-10-20T13:19:18.197585"
+    },
+    {
+      "number": 5,
+      "disorder": "Alcohol Use Disorder",
+      "file": "alcohol_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.98763227462769,
+      "chapter_file": "book_chapters/005_alcohol_use_disorder.md",
+      "timestamp": "2025-10-20T13:20:56.211452"
+    },
+    {
+      "number": 6,
+      "disorder": "Alcohol Withdrawal",
+      "file": "alcohol_withdrawal",
+      "paper_count": 2000,
+      "generation_time": 94.48049855232239,
+      "chapter_file": "book_chapters/006_alcohol_withdrawal.md",
+      "timestamp": "2025-10-20T13:22:36.724876"
+    },
+    {
+      "number": 7,
+      "disorder": "Anorexia Nervosa",
+      "file": "anorexia_nervosa",
+      "paper_count": 2000,
+      "generation_time": 93.40996384620667,
+      "chapter_file": "book_chapters/007_anorexia_nervosa.md",
+      "timestamp": "2025-10-20T13:24:16.183672"
+    },
+    {
+      "number": 8,
+      "disorder": "Antisocial Personality Disorder",
+      "file": "antisocial_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 96.67823553085327,
+      "chapter_file": "book_chapters/008_antisocial_personality_disorder.md",
+      "timestamp": "2025-10-20T13:25:58.910260"
+    },
+    {
+      "number": 9,
+      "disorder": "Anxiety Disorder Due to Another Medical Condition",
+      "file": "anxiety_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 93.82565546035767,
+      "chapter_file": "book_chapters/009_anxiety_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T13:27:38.761657"
+    },
+    {
+      "number": 11,
+      "disorder": "Autism Spectrum Disorder",
+      "file": "autism_spectrum_disorder",
+      "paper_count": 2000,
+      "generation_time": 101.38637328147888,
+      "chapter_file": "book_chapters/011_autism_spectrum_disorder.md",
+      "timestamp": "2025-10-20T13:31:02.472107"
+    },
+    {
+      "number": 12,
+      "disorder": "Avoidant Personality Disorder",
+      "file": "avoidant_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 112.69078254699707,
+      "chapter_file": "book_chapters/012_avoidant_personality_disorder.md",
+      "timestamp": "2025-10-20T13:33:01.176708"
+    },
+    {
+      "number": 14,
+      "disorder": "Binge-Eating Disorder",
+      "file": "binge_eating_disorder",
+      "paper_count": 2000,
+      "generation_time": 99.54660034179688,
+      "chapter_file": "book_chapters/014_binge-eating_disorder.md",
+      "timestamp": "2025-10-20T13:36:23.996071"
+    },
+    {
+      "number": 15,
+      "disorder": "Bipolar and Related Disorder Due to Another Medical Condition",
+      "file": "bipolar_and_related_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 88.72962689399719,
+      "chapter_file": "book_chapters/015_bipolar_and_related_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T13:37:58.757182"
+    },
+    {
+      "number": 16,
+      "disorder": "Bipolar I Disorder",
+      "file": "bipolar_i_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.33896327018738,
+      "chapter_file": "book_chapters/016_bipolar_i_disorder.md",
+      "timestamp": "2025-10-20T13:39:35.123229"
+    },
+    {
+      "number": 17,
+      "disorder": "Bipolar II Disorder",
+      "file": "bipolar_ii_disorder",
+      "paper_count": 2000,
+      "generation_time": 98.10295081138611,
+      "chapter_file": "book_chapters/017_bipolar_ii_disorder.md",
+      "timestamp": "2025-10-20T13:41:19.254571"
+    },
+    {
+      "number": 18,
+      "disorder": "Body Dysmorphic Disorder",
+      "file": "body_dysmorphic_disorder",
+      "paper_count": 2000,
+      "generation_time": 97.5008385181427,
+      "chapter_file": "book_chapters/018_body_dysmorphic_disorder.md",
+      "timestamp": "2025-10-20T13:43:02.780831"
+    },
+    {
+      "number": 19,
+      "disorder": "Borderline Personality Disorder",
+      "file": "borderline_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 93.57555484771729,
+      "chapter_file": "book_chapters/019_borderline_personality_disorder.md",
+      "timestamp": "2025-10-20T13:44:42.385640"
+    },
+    {
+      "number": 20,
+      "disorder": "Brief Psychotic Disorder",
+      "file": "brief_psychotic_disorder",
+      "paper_count": 2000,
+      "generation_time": 96.2457046508789,
+      "chapter_file": "book_chapters/020_brief_psychotic_disorder.md",
+      "timestamp": "2025-10-20T13:46:24.657502"
+    },
+    {
+      "number": 21,
+      "disorder": "Bulimia Nervosa",
+      "file": "bulimia_nervosa",
+      "paper_count": 2000,
+      "generation_time": 89.19711017608643,
+      "chapter_file": "book_chapters/021_bulimia_nervosa.md",
+      "timestamp": "2025-10-20T13:47:59.881235"
+    },
+    {
+      "number": 22,
+      "disorder": "Cannabis Intoxication",
+      "file": "cannabis_intoxication",
+      "paper_count": 2000,
+      "generation_time": 87.14980125427246,
+      "chapter_file": "book_chapters/022_cannabis_intoxication.md",
+      "timestamp": "2025-10-20T13:49:33.058573"
+    },
+    {
+      "number": 23,
+      "disorder": "Cannabis Use Disorder",
+      "file": "cannabis_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.88414931297302,
+      "chapter_file": "book_chapters/023_cannabis_use_disorder.md",
+      "timestamp": "2025-10-20T13:51:09.965041"
+    },
+    {
+      "number": 24,
+      "disorder": "Cannabis Withdrawal",
+      "file": "cannabis_withdrawal",
+      "paper_count": 2000,
+      "generation_time": 90.01641154289246,
+      "chapter_file": "book_chapters/024_cannabis_withdrawal.md",
+      "timestamp": "2025-10-20T13:52:46.011258"
+    },
+    {
+      "number": 25,
+      "disorder": "Catatonic Disorder Due to Another Medical Condition",
+      "file": "catatonic_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 90.19159054756165,
+      "chapter_file": "book_chapters/025_catatonic_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T13:54:22.231524"
+    },
+    {
+      "number": 26,
+      "disorder": "Central Sleep Apnea",
+      "file": "central_sleep_apnea",
+      "paper_count": 2000,
+      "generation_time": 92.85239720344543,
+      "chapter_file": "book_chapters/026_central_sleep_apnea.md",
+      "timestamp": "2025-10-20T13:56:01.097232"
+    },
+    {
+      "number": 27,
+      "disorder": "Childhood-Onset Fluency Disorder (Stuttering)",
+      "file": "childhood_onset_fluency_disorder_stuttering",
+      "paper_count": 2000,
+      "generation_time": 93.00234818458557,
+      "chapter_file": "book_chapters/027_childhood-onset_fluency_disorder_(stuttering).md",
+      "timestamp": "2025-10-20T13:57:40.135614"
+    },
+    {
+      "number": 28,
+      "disorder": "Circadian Rhythm Sleep-Wake Disorders",
+      "file": "circadian_rhythm_sleep_wake_disorders",
+      "paper_count": 2000,
+      "generation_time": 82.34662747383118,
+      "chapter_file": "book_chapters/028_circadian_rhythm_sleep-wake_disorders.md",
+      "timestamp": "2025-10-20T13:59:08.506603"
+    },
+    {
+      "number": 29,
+      "disorder": "Compulsive and Related Disorder",
+      "file": "compulsive_and_related_disorder",
+      "paper_count": 2000,
+      "generation_time": 242.69587469100952,
+      "chapter_file": "book_chapters/029_compulsive_and_related_disorder.md",
+      "timestamp": "2025-10-20T14:03:17.234172"
+    },
+    {
+      "number": 30,
+      "disorder": "Conduct Disorder",
+      "file": "conduct_disorder",
+      "paper_count": 2000,
+      "generation_time": 98.8380606174469,
+      "chapter_file": "book_chapters/030_conduct_disorder.md",
+      "timestamp": "2025-10-20T14:05:02.096137"
+    },
+    {
+      "number": 31,
+      "disorder": "Cyclothymic Disorder",
+      "file": "cyclothymic_disorder",
+      "paper_count": 2000,
+      "generation_time": 95.26175904273987,
+      "chapter_file": "book_chapters/031_cyclothymic_disorder.md",
+      "timestamp": "2025-10-20T14:06:43.385349"
+    },
+    {
+      "number": 32,
+      "disorder": "Delayed Ejaculation",
+      "file": "delayed_ejaculation",
+      "paper_count": 2000,
+      "generation_time": 90.09971499443054,
+      "chapter_file": "book_chapters/032_delayed_ejaculation.md",
+      "timestamp": "2025-10-20T14:08:19.513960"
+    },
+    {
+      "number": 33,
+      "disorder": "Delirium",
+      "file": "delirium",
+      "paper_count": 2000,
+      "generation_time": 91.4552206993103,
+      "chapter_file": "book_chapters/033_delirium.md",
+      "timestamp": "2025-10-20T14:09:57.000799"
+    },
+    {
+      "number": 34,
+      "disorder": "Delusional Disorder",
+      "file": "delusional_disorder",
+      "paper_count": 2000,
+      "generation_time": 96.02018189430237,
+      "chapter_file": "book_chapters/034_delusional_disorder.md",
+      "timestamp": "2025-10-20T14:11:39.047191"
+    },
+    {
+      "number": 35,
+      "disorder": "Dependent Personality Disorder",
+      "file": "dependent_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 98.70278906822205,
+      "chapter_file": "book_chapters/035_dependent_personality_disorder.md",
+      "timestamp": "2025-10-20T14:13:23.774503"
+    },
+    {
+      "number": 37,
+      "disorder": "Depressive Disorder Due to Another Medical Condition",
+      "file": "depressive_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 96.54323959350586,
+      "chapter_file": "book_chapters/037_depressive_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T14:16:57.758264"
+    },
+    {
+      "number": 38,
+      "disorder": "Developmental Coordination Disorder",
+      "file": "developmental_coordination_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.52459001541138,
+      "chapter_file": "book_chapters/038_developmental_coordination_disorder.md",
+      "timestamp": "2025-10-20T14:18:35.338462"
+    },
+    {
+      "number": 39,
+      "disorder": "Disinhibited Social Engagement Disorder",
+      "file": "disinhibited_social_engagement_disorder",
+      "paper_count": 2000,
+      "generation_time": 100.6869375705719,
+      "chapter_file": "book_chapters/039_disinhibited_social_engagement_disorder.md",
+      "timestamp": "2025-10-20T14:20:22.050582"
+    },
+    {
+      "number": 40,
+      "disorder": "Disruptive Mood Dysregulation Disorder",
+      "file": "disruptive_mood_dysregulation_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.73797798156738,
+      "chapter_file": "book_chapters/040_disruptive_mood_dysregulation_disorder.md",
+      "timestamp": "2025-10-20T14:22:00.818702"
+    },
+    {
+      "number": 41,
+      "disorder": "Dissociative Amnesia",
+      "file": "dissociative_amnesia",
+      "paper_count": 2000,
+      "generation_time": 91.5957612991333,
+      "chapter_file": "book_chapters/041_dissociative_amnesia.md",
+      "timestamp": "2025-10-20T14:23:38.445624"
+    },
+    {
+      "number": 42,
+      "disorder": "Dissociative Identity Disorder",
+      "file": "dissociative_identity_disorder",
+      "paper_count": 2000,
+      "generation_time": 99.56467771530151,
+      "chapter_file": "book_chapters/042_dissociative_identity_disorder.md",
+      "timestamp": "2025-10-20T14:25:24.044586"
+    },
+    {
+      "number": 43,
+      "disorder": "Encopresis",
+      "file": "encopresis",
+      "paper_count": 2000,
+      "generation_time": 88.00437903404236,
+      "chapter_file": "book_chapters/043_encopresis.md",
+      "timestamp": "2025-10-20T14:26:58.070033"
+    },
+    {
+      "number": 44,
+      "disorder": "Enuresis",
+      "file": "enuresis",
+      "paper_count": 2000,
+      "generation_time": 84.89801692962646,
+      "chapter_file": "book_chapters/044_enuresis.md",
+      "timestamp": "2025-10-20T14:28:28.998033"
+    },
+    {
+      "number": 45,
+      "disorder": "Erectile Disorder",
+      "file": "erectile_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.450275182724,
+      "chapter_file": "book_chapters/045_erectile_disorder.md",
+      "timestamp": "2025-10-20T14:30:07.476105"
+    },
+    {
+      "number": 46,
+      "disorder": "Excoriation (Skin-Picking) Disorder",
+      "file": "excoriation_skin_picking_disorder",
+      "paper_count": 2000,
+      "generation_time": 97.35180974006653,
+      "chapter_file": "book_chapters/046_excoriation_(skin-picking)_disorder.md",
+      "timestamp": "2025-10-20T14:31:50.855574"
+    },
+    {
+      "number": 47,
+      "disorder": "Exhibitionistic Disorder",
+      "file": "exhibitionistic_disorder",
+      "paper_count": 2000,
+      "generation_time": 80.54886960983276,
+      "chapter_file": "book_chapters/047_exhibitionistic_disorder.md",
+      "timestamp": "2025-10-20T14:33:17.427768"
+    },
+    {
+      "number": 48,
+      "disorder": "Factitious Disorder",
+      "file": "factitious_disorder",
+      "paper_count": 2000,
+      "generation_time": 96.35286164283752,
+      "chapter_file": "book_chapters/048_factitious_disorder.md",
+      "timestamp": "2025-10-20T14:34:59.801873"
+    },
+    {
+      "number": 49,
+      "disorder": "Factitious Disorder Imposed on Another",
+      "file": "factitious_disorder_imposed_on_another",
+      "paper_count": 2000,
+      "generation_time": 97.60828280448914,
+      "chapter_file": "book_chapters/049_factitious_disorder_imposed_on_another.md",
+      "timestamp": "2025-10-20T14:36:43.439410"
+    },
+    {
+      "number": 50,
+      "disorder": "Female Orgasmic Disorder",
+      "file": "female_orgasmic_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.6496684551239,
+      "chapter_file": "book_chapters/050_female_orgasmic_disorder.md",
+      "timestamp": "2025-10-20T14:38:21.114185"
+    },
+    {
+      "number": 52,
+      "disorder": "Fetishistic Disorder",
+      "file": "fetishistic_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.84777474403381,
+      "chapter_file": "book_chapters/052_fetishistic_disorder.md",
+      "timestamp": "2025-10-20T14:41:33.771754"
+    },
+    {
+      "number": 53,
+      "disorder": "Frotteuristic Disorder",
+      "file": "frotteuristic_disorder",
+      "paper_count": 2000,
+      "generation_time": 98.97044849395752,
+      "chapter_file": "book_chapters/053_frotteuristic_disorder.md",
+      "timestamp": "2025-10-20T14:43:18.757882"
+    },
+    {
+      "number": 54,
+      "disorder": "Functional Neurological Symptom Disorder (Conversion Disorder)",
+      "file": "functional_neurological_symptom_disorder_conversion_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.6927559375763,
+      "chapter_file": "book_chapters/054_functional_neurological_symptom_disorder_(conversion_disorder).md",
+      "timestamp": "2025-10-20T14:44:56.477245"
+    },
+    {
+      "number": 55,
+      "disorder": "Gender Dysphoria",
+      "file": "gender_dysphoria",
+      "paper_count": 2000,
+      "generation_time": 98.33408570289612,
+      "chapter_file": "book_chapters/055_gender_dysphoria.md",
+      "timestamp": "2025-10-20T14:46:40.837415"
+    },
+    {
+      "number": 56,
+      "disorder": "Generalized Anxiety Disorder",
+      "file": "generalized_anxiety_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.44535374641418,
+      "chapter_file": "book_chapters/056_generalized_anxiety_disorder.md",
+      "timestamp": "2025-10-20T14:48:15.312036"
+    },
+    {
+      "number": 58,
+      "disorder": "Histrionic Personality Disorder",
+      "file": "histrionic_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.42185306549072,
+      "chapter_file": "book_chapters/058_histrionic_personality_disorder.md",
+      "timestamp": "2025-10-20T14:51:27.284762"
+    },
+    {
+      "number": 59,
+      "disorder": "Hoarding Disorder",
+      "file": "hoarding_disorder",
+      "paper_count": 2000,
+      "generation_time": 94.05185294151306,
+      "chapter_file": "book_chapters/059_hoarding_disorder.md",
+      "timestamp": "2025-10-20T14:53:07.368425"
+    },
+    {
+      "number": 60,
+      "disorder": "Hypersomnolence Disorder",
+      "file": "hypersomnolence_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.70681500434875,
+      "chapter_file": "book_chapters/060_hypersomnolence_disorder.md",
+      "timestamp": "2025-10-20T14:54:46.103434"
+    },
+    {
+      "number": 61,
+      "disorder": "Illness Anxiety Disorder",
+      "file": "illness_anxiety_disorder",
+      "paper_count": 2000,
+      "generation_time": 94.23200392723083,
+      "chapter_file": "book_chapters/061_illness_anxiety_disorder.md",
+      "timestamp": "2025-10-20T14:56:26.364172"
+    },
+    {
+      "number": 62,
+      "disorder": "Inhalant Intoxication",
+      "file": "inhalant_intoxication",
+      "paper_count": 2000,
+      "generation_time": 90.92717576026917,
+      "chapter_file": "book_chapters/062_inhalant_intoxication.md",
+      "timestamp": "2025-10-20T14:58:03.318129"
+    },
+    {
+      "number": 63,
+      "disorder": "Inhalant Use Disorder",
+      "file": "inhalant_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.204674243927,
+      "chapter_file": "book_chapters/063_inhalant_use_disorder.md",
+      "timestamp": "2025-10-20T14:59:37.565587"
+    },
+    {
+      "number": 64,
+      "disorder": "Insomnia Disorder",
+      "file": "insomnia_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.27922368049622,
+      "chapter_file": "book_chapters/064_insomnia_disorder.md",
+      "timestamp": "2025-10-20T15:01:10.872988"
+    },
+    {
+      "number": 65,
+      "disorder": "Intellectual Developmental Disorder (Intellectual Disability)",
+      "file": "intellectual_developmental_disorder_intellectual_disability",
+      "paper_count": 2000,
+      "generation_time": 89.46516966819763,
+      "chapter_file": "book_chapters/065_intellectual_developmental_disorder_(intellectual_disability).md",
+      "timestamp": "2025-10-20T15:02:46.362171"
+    },
+    {
+      "number": 66,
+      "disorder": "Intermittent Explosive Disorder",
+      "file": "intermittent_explosive_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.80969309806824,
+      "chapter_file": "book_chapters/066_intermittent_explosive_disorder.md",
+      "timestamp": "2025-10-20T15:04:25.201482"
+    },
+    {
+      "number": 67,
+      "disorder": "Kleptomania",
+      "file": "kleptomania",
+      "paper_count": 2000,
+      "generation_time": 97.55200028419495,
+      "chapter_file": "book_chapters/067_kleptomania.md",
+      "timestamp": "2025-10-20T15:06:08.768702"
+    },
+    {
+      "number": 68,
+      "disorder": "Language Disorder",
+      "file": "language_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.69798421859741,
+      "chapter_file": "book_chapters/068_language_disorder.md",
+      "timestamp": "2025-10-20T15:07:45.497419"
+    },
+    {
+      "number": 69,
+      "disorder": "Lewy Bodies",
+      "file": "lewy_bodies",
+      "paper_count": 2000,
+      "generation_time": 75.43654608726501,
+      "chapter_file": "book_chapters/069_lewy_bodies.md",
+      "timestamp": "2025-10-20T15:09:06.967021"
+    },
+    {
+      "number": 70,
+      "disorder": "Major Depressive Disorder",
+      "file": "major_depressive_disorder",
+      "paper_count": 2000,
+      "generation_time": 93.25405383110046,
+      "chapter_file": "book_chapters/070_major_depressive_disorder.md",
+      "timestamp": "2025-10-20T15:10:46.251927"
+    },
+    {
+      "number": 71,
+      "disorder": "Major Neurocognitive Disorder",
+      "file": "major_neurocognitive_disorder",
+      "paper_count": 2000,
+      "generation_time": 86.08578586578369,
+      "chapter_file": "book_chapters/071_major_neurocognitive_disorder.md",
+      "timestamp": "2025-10-20T15:12:18.381704"
+    },
+    {
+      "number": 72,
+      "disorder": "Major or Mild Frontotemporal Neurocognitive Disorder",
+      "file": "major_or_mild_frontotemporal_neurocognitive_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.66488337516785,
+      "chapter_file": "book_chapters/072_major_or_mild_frontotemporal_neurocognitive_disorder.md",
+      "timestamp": "2025-10-20T15:13:52.078175"
+    },
+    {
+      "number": 73,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Alzheimer’s Disease",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_alzheimers_disease",
+      "paper_count": 2000,
+      "generation_time": 83.63619661331177,
+      "chapter_file": "book_chapters/073_major_or_mild_neurocognitive_disorder_due_to_alzheimer’s_disease.md",
+      "timestamp": "2025-10-20T15:15:21.769897"
+    },
+    {
+      "number": 74,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Another Medical Condition",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 110.24273872375488,
+      "chapter_file": "book_chapters/074_major_or_mild_neurocognitive_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T15:17:18.041996"
+    },
+    {
+      "number": 75,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to HIV Infection",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_hiv_infection",
+      "paper_count": 2000,
+      "generation_time": 90.50817370414734,
+      "chapter_file": "book_chapters/075_major_or_mild_neurocognitive_disorder_due_to_hiv_infection.md",
+      "timestamp": "2025-10-20T15:18:54.592164"
+    },
+    {
+      "number": 76,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Huntington’s Disease",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_huntingtons_disease",
+      "paper_count": 2000,
+      "generation_time": 80.54539966583252,
+      "chapter_file": "book_chapters/076_major_or_mild_neurocognitive_disorder_due_to_huntington’s_disease.md",
+      "timestamp": "2025-10-20T15:20:21.157846"
+    },
+    {
+      "number": 77,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Multiple Etiologies",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_multiple_etiologies",
+      "paper_count": 2000,
+      "generation_time": 90.7270016670227,
+      "chapter_file": "book_chapters/077_major_or_mild_neurocognitive_disorder_due_to_multiple_etiologies.md",
+      "timestamp": "2025-10-20T15:21:57.915081"
+    },
+    {
+      "number": 78,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Parkinson’s Disease",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_parkinsons_disease",
+      "paper_count": 2000,
+      "generation_time": 80.91994786262512,
+      "chapter_file": "book_chapters/078_major_or_mild_neurocognitive_disorder_due_to_parkinson’s_disease.md",
+      "timestamp": "2025-10-20T15:23:24.862321"
+    },
+    {
+      "number": 79,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Prion Disease",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_prion_disease",
+      "paper_count": 2000,
+      "generation_time": 78.30560445785522,
+      "chapter_file": "book_chapters/079_major_or_mild_neurocognitive_disorder_due_to_prion_disease.md",
+      "timestamp": "2025-10-20T15:24:49.190739"
+    },
+    {
+      "number": 80,
+      "disorder": "Major or Mild Neurocognitive Disorder Due to Traumatic Brain Injury",
+      "file": "major_or_mild_neurocognitive_disorder_due_to_traumatic_brain_injury",
+      "paper_count": 2000,
+      "generation_time": 81.43851661682129,
+      "chapter_file": "book_chapters/080_major_or_mild_neurocognitive_disorder_due_to_traumatic_brain_injury.md",
+      "timestamp": "2025-10-20T15:26:16.655515"
+    },
+    {
+      "number": 81,
+      "disorder": "Major or Mild Vascular Neurocognitive Disorder",
+      "file": "major_or_mild_vascular_neurocognitive_disorder",
+      "paper_count": 2000,
+      "generation_time": 81.29758024215698,
+      "chapter_file": "book_chapters/081_major_or_mild_vascular_neurocognitive_disorder.md",
+      "timestamp": "2025-10-20T15:27:43.980760"
+    },
+    {
+      "number": 82,
+      "disorder": "Male Hypoactive Sexual Desire Disorder",
+      "file": "male_hypoactive_sexual_desire_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.94358563423157,
+      "chapter_file": "book_chapters/082_male_hypoactive_sexual_desire_disorder.md",
+      "timestamp": "2025-10-20T15:29:20.953958"
+    },
+    {
+      "number": 83,
+      "disorder": "Mild Neurocognitive Disorder",
+      "file": "mild_neurocognitive_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.62761282920837,
+      "chapter_file": "book_chapters/083_mild_neurocognitive_disorder.md",
+      "timestamp": "2025-10-20T15:30:55.606577"
+    },
+    {
+      "number": 84,
+      "disorder": "Narcissistic Personality Disorder",
+      "file": "narcissistic_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.10111904144287,
+      "chapter_file": "book_chapters/084_narcissistic_personality_disorder.md",
+      "timestamp": "2025-10-20T15:32:33.731229"
+    },
+    {
+      "number": 85,
+      "disorder": "Narcolepsy",
+      "file": "narcolepsy",
+      "paper_count": 2000,
+      "generation_time": 84.02395272254944,
+      "chapter_file": "book_chapters/085_narcolepsy.md",
+      "timestamp": "2025-10-20T15:34:03.783652"
+    },
+    {
+      "number": 86,
+      "disorder": "Nightmare Disorder",
+      "file": "nightmare_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.64672255516052,
+      "chapter_file": "book_chapters/086_nightmare_disorder.md",
+      "timestamp": "2025-10-20T15:35:37.456536"
+    },
+    {
+      "number": 87,
+      "disorder": "Non–Rapid Eye Movement Sleep Arousal Disorders",
+      "file": "nonrapid_eye_movement_sleep_arousal_disorders",
+      "paper_count": 2000,
+      "generation_time": 114.25860261917114,
+      "chapter_file": "book_chapters/087_non–rapid_eye_movement_sleep_arousal_disorders.md",
+      "timestamp": "2025-10-20T15:37:37.744640"
+    },
+    {
+      "number": 88,
+      "disorder": "Obsessive-Compulsive and Related Disorder Due to Another Medical Condition",
+      "file": "obsessive_compulsive_and_related_disorder_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 90.86531734466553,
+      "chapter_file": "book_chapters/088_obsessive-compulsive_and_related_disorder_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T15:39:14.634180"
+    },
+    {
+      "number": 89,
+      "disorder": "Obsessive-Compulsive Disorder",
+      "file": "obsessive_compulsive_disorder",
+      "paper_count": 2000,
+      "generation_time": 80.9286458492279,
+      "chapter_file": "book_chapters/089_obsessive-compulsive_disorder.md",
+      "timestamp": "2025-10-20T15:40:41.581801"
+    },
+    {
+      "number": 90,
+      "disorder": "Obsessive-Compulsive Personality Disorder",
+      "file": "obsessive_compulsive_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.48501110076904,
+      "chapter_file": "book_chapters/090_obsessive-compulsive_personality_disorder.md",
+      "timestamp": "2025-10-20T15:42:19.091557"
+    },
+    {
+      "number": 91,
+      "disorder": "Obstructive Sleep Apnea Hypopnea",
+      "file": "obstructive_sleep_apnea_hypopnea",
+      "paper_count": 2000,
+      "generation_time": 90.7268328666687,
+      "chapter_file": "book_chapters/091_obstructive_sleep_apnea_hypopnea.md",
+      "timestamp": "2025-10-20T15:43:55.846049"
+    },
+    {
+      "number": 92,
+      "disorder": "Opioid Intoxication",
+      "file": "opioid_intoxication",
+      "paper_count": 2000,
+      "generation_time": 83.90949249267578,
+      "chapter_file": "book_chapters/092_opioid_intoxication.md",
+      "timestamp": "2025-10-20T15:45:25.781840"
+    },
+    {
+      "number": 93,
+      "disorder": "Opioid Use Disorder",
+      "file": "opioid_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 86.53071856498718,
+      "chapter_file": "book_chapters/093_opioid_use_disorder.md",
+      "timestamp": "2025-10-20T15:46:58.344021"
+    },
+    {
+      "number": 94,
+      "disorder": "Opioid Withdrawal",
+      "file": "opioid_withdrawal",
+      "paper_count": 2000,
+      "generation_time": 85.40638184547424,
+      "chapter_file": "book_chapters/094_opioid_withdrawal.md",
+      "timestamp": "2025-10-20T15:48:29.779489"
+    },
+    {
+      "number": 95,
+      "disorder": "Oppositional Defiant Disorder",
+      "file": "oppositional_defiant_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.9768443107605,
+      "chapter_file": "book_chapters/095_oppositional_defiant_disorder.md",
+      "timestamp": "2025-10-20T15:50:06.788503"
+    },
+    {
+      "number": 96,
+      "disorder": "Other Hallucinogen Intoxication",
+      "file": "other_hallucinogen_intoxication",
+      "paper_count": 2000,
+      "generation_time": 88.20038533210754,
+      "chapter_file": "book_chapters/096_other_hallucinogen_intoxication.md",
+      "timestamp": "2025-10-20T15:51:41.016140"
+    },
+    {
+      "number": 97,
+      "disorder": "Other Hallucinogen Use Disorder",
+      "file": "other_hallucinogen_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.96873641014099,
+      "chapter_file": "book_chapters/097_other_hallucinogen_use_disorder.md",
+      "timestamp": "2025-10-20T15:53:15.014879"
+    },
+    {
+      "number": 98,
+      "disorder": "Other (or Unknown) Substance Intoxication",
+      "file": "other_or_unknown_substance_intoxication",
+      "paper_count": 2000,
+      "generation_time": 86.95880055427551,
+      "chapter_file": "book_chapters/098_other_(or_unknown)_substance_intoxication.md",
+      "timestamp": "2025-10-20T15:54:48.001665"
+    },
+    {
+      "number": 99,
+      "disorder": "Other (or Unknown) Substance Use Disorder",
+      "file": "other_or_unknown_substance_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.2403666973114,
+      "chapter_file": "book_chapters/099_other_(or_unknown)_substance_use_disorder.md",
+      "timestamp": "2025-10-20T15:56:26.269289"
+    },
+    {
+      "number": 100,
+      "disorder": "Other (or Unknown) Substance Withdrawal",
+      "file": "other_or_unknown_substance_withdrawal",
+      "paper_count": 2000,
+      "generation_time": 87.20935845375061,
+      "chapter_file": "book_chapters/100_other_(or_unknown)_substance_withdrawal.md",
+      "timestamp": "2025-10-20T15:57:59.506946"
+    },
+    {
+      "number": 101,
+      "disorder": "Panic Disorder",
+      "file": "panic_disorder",
+      "paper_count": 2000,
+      "generation_time": 86.87156462669373,
+      "chapter_file": "book_chapters/101_panic_disorder.md",
+      "timestamp": "2025-10-20T15:59:32.411803"
+    },
+    {
+      "number": 102,
+      "disorder": "Paranoid Personality Disorder",
+      "file": "paranoid_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 94.8147931098938,
+      "chapter_file": "book_chapters/102_paranoid_personality_disorder.md",
+      "timestamp": "2025-10-20T16:01:13.254586"
+    },
+    {
+      "number": 103,
+      "disorder": "Pedophilic Disorder",
+      "file": "pedophilic_disorder",
+      "paper_count": 2000,
+      "generation_time": 94.12596416473389,
+      "chapter_file": "book_chapters/103_pedophilic_disorder.md",
+      "timestamp": "2025-10-20T16:02:53.401412"
+    },
+    {
+      "number": 104,
+      "disorder": "Persistent (Chronic) Motor or Vocal Tic Disorder",
+      "file": "persistent_chronic_motor_or_vocal_tic_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.15456676483154,
+      "chapter_file": "book_chapters/104_persistent_(chronic)_motor_or_vocal_tic_disorder.md",
+      "timestamp": "2025-10-20T16:04:29.576712"
+    },
+    {
+      "number": 105,
+      "disorder": "Persistent Depressive Disorder",
+      "file": "persistent_depressive_disorder",
+      "paper_count": 2000,
+      "generation_time": 85.10785484313965,
+      "chapter_file": "book_chapters/105_persistent_depressive_disorder.md",
+      "timestamp": "2025-10-20T16:06:00.713886"
+    },
+    {
+      "number": 106,
+      "disorder": "Personality Change Due to Another Medical Condition",
+      "file": "personality_change_due_to_another_medical_condition",
+      "paper_count": 2000,
+      "generation_time": 92.13440108299255,
+      "chapter_file": "book_chapters/106_personality_change_due_to_another_medical_condition.md",
+      "timestamp": "2025-10-20T16:07:38.866531"
+    },
+    {
+      "number": 107,
+      "disorder": "Phencyclidine Intoxication",
+      "file": "phencyclidine_intoxication",
+      "paper_count": 2000,
+      "generation_time": 87.28620433807373,
+      "chapter_file": "book_chapters/107_phencyclidine_intoxication.md",
+      "timestamp": "2025-10-20T16:09:12.181633"
+    },
+    {
+      "number": 108,
+      "disorder": "Phencyclidine Use Disorder",
+      "file": "phencyclidine_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 82.84259510040283,
+      "chapter_file": "book_chapters/108_phencyclidine_use_disorder.md",
+      "timestamp": "2025-10-20T16:10:41.049098"
+    },
+    {
+      "number": 109,
+      "disorder": "Posttraumatic Stress Disorder",
+      "file": "posttraumatic_stress_disorder",
+      "paper_count": 2000,
+      "generation_time": 85.65190267562866,
+      "chapter_file": "book_chapters/109_posttraumatic_stress_disorder.md",
+      "timestamp": "2025-10-20T16:12:12.729333"
+    },
+    {
+      "number": 110,
+      "disorder": "Premature (Early) Ejaculation",
+      "file": "premature_early_ejaculation",
+      "paper_count": 2000,
+      "generation_time": 84.41633248329163,
+      "chapter_file": "book_chapters/110_premature_(early)_ejaculation.md",
+      "timestamp": "2025-10-20T16:13:43.177314"
+    },
+    {
+      "number": 111,
+      "disorder": "Premenstrual Dysphoric Disorder",
+      "file": "premenstrual_dysphoric_disorder",
+      "paper_count": 2000,
+      "generation_time": 92.31398916244507,
+      "chapter_file": "book_chapters/111_premenstrual_dysphoric_disorder.md",
+      "timestamp": "2025-10-20T16:15:21.520751"
+    },
+    {
+      "number": 112,
+      "disorder": "Prolonged Grief Disorder",
+      "file": "prolonged_grief_disorder",
+      "paper_count": 2000,
+      "generation_time": 95.0911796092987,
+      "chapter_file": "book_chapters/112_prolonged_grief_disorder.md",
+      "timestamp": "2025-10-20T16:17:02.639855"
+    },
+    {
+      "number": 113,
+      "disorder": "Provisional Tic Disorder",
+      "file": "provisional_tic_disorder",
+      "paper_count": 2000,
+      "generation_time": 73.60335636138916,
+      "chapter_file": "book_chapters/113_provisional_tic_disorder.md",
+      "timestamp": "2025-10-20T16:18:22.264866"
+    },
+    {
+      "number": 114,
+      "disorder": "Psychological Factors Affecting Other Medical Conditions",
+      "file": "psychological_factors_affecting_other_medical_conditions",
+      "paper_count": 2000,
+      "generation_time": 87.08577847480774,
+      "chapter_file": "book_chapters/114_psychological_factors_affecting_other_medical_conditions.md",
+      "timestamp": "2025-10-20T16:19:55.379487"
+    },
+    {
+      "number": 115,
+      "disorder": "Psychotic Disorder Due to Another MedicalCondition",
+      "file": "psychotic_disorder_due_to_another_medicalcondition",
+      "paper_count": 2000,
+      "generation_time": 94.66927433013916,
+      "chapter_file": "book_chapters/115_psychotic_disorder_due_to_another_medicalcondition.md",
+      "timestamp": "2025-10-20T16:21:36.073543"
+    },
+    {
+      "number": 116,
+      "disorder": "Pyromania",
+      "file": "pyromania",
+      "paper_count": 2000,
+      "generation_time": 92.14773559570312,
+      "chapter_file": "book_chapters/116_pyromania.md",
+      "timestamp": "2025-10-20T16:23:14.239379"
+    },
+    {
+      "number": 117,
+      "disorder": "Rapid Eye Movement Sleep Behavior Disorder",
+      "file": "rapid_eye_movement_sleep_behavior_disorder",
+      "paper_count": 2000,
+      "generation_time": 79.66600227355957,
+      "chapter_file": "book_chapters/117_rapid_eye_movement_sleep_behavior_disorder.md",
+      "timestamp": "2025-10-20T16:24:39.933084"
+    },
+    {
+      "number": 118,
+      "disorder": "Reactive Attachment Disorder",
+      "file": "reactive_attachment_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.84189891815186,
+      "chapter_file": "book_chapters/118_reactive_attachment_disorder.md",
+      "timestamp": "2025-10-20T16:26:13.806678"
+    },
+    {
+      "number": 119,
+      "disorder": "Restless Legs Syndrome",
+      "file": "restless_legs_syndrome",
+      "paper_count": 2000,
+      "generation_time": 88.93810796737671,
+      "chapter_file": "book_chapters/119_restless_legs_syndrome.md",
+      "timestamp": "2025-10-20T16:27:48.774309"
+    },
+    {
+      "number": 120,
+      "disorder": "Rumination Disorder",
+      "file": "rumination_disorder",
+      "paper_count": 2000,
+      "generation_time": 87.39033937454224,
+      "chapter_file": "book_chapters/120_rumination_disorder.md",
+      "timestamp": "2025-10-20T16:29:22.191516"
+    },
+    {
+      "number": 121,
+      "disorder": "Schizoaffective Disorder",
+      "file": "schizoaffective_disorder",
+      "paper_count": 2000,
+      "generation_time": 86.02159786224365,
+      "chapter_file": "book_chapters/121_schizoaffective_disorder.md",
+      "timestamp": "2025-10-20T16:30:54.237567"
+    },
+    {
+      "number": 122,
+      "disorder": "Schizoid Personality Disorder",
+      "file": "schizoid_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.26583552360535,
+      "chapter_file": "book_chapters/122_schizoid_personality_disorder.md",
+      "timestamp": "2025-10-20T16:32:28.534276"
+    },
+    {
+      "number": 123,
+      "disorder": "Schizophrenia",
+      "file": "schizophrenia",
+      "paper_count": 2000,
+      "generation_time": 86.97789311408997,
+      "chapter_file": "book_chapters/123_schizophrenia.md",
+      "timestamp": "2025-10-20T16:34:01.547084"
+    },
+    {
+      "number": 124,
+      "disorder": "Schizophreniform Disorder",
+      "file": "schizophreniform_disorder",
+      "paper_count": 2000,
+      "generation_time": 84.33659505844116,
+      "chapter_file": "book_chapters/124_schizophreniform_disorder.md",
+      "timestamp": "2025-10-20T16:35:31.915889"
+    },
+    {
+      "number": 125,
+      "disorder": "Schizotypal Personality Disorder",
+      "file": "schizotypal_personality_disorder",
+      "paper_count": 2000,
+      "generation_time": 89.59891724586487,
+      "chapter_file": "book_chapters/125_schizotypal_personality_disorder.md",
+      "timestamp": "2025-10-20T16:37:07.545247"
+    },
+    {
+      "number": 126,
+      "disorder": "Sedative, Hypnotic, or Anxiolytic Intoxication",
+      "file": "sedative_hypnotic_or_anxiolytic_intoxication",
+      "paper_count": 2000,
+      "generation_time": 87.90558242797852,
+      "chapter_file": "book_chapters/126_sedative,_hypnotic,_or_anxiolytic_intoxication.md",
+      "timestamp": "2025-10-20T16:38:41.480596"
+    },
+    {
+      "number": 127,
+      "disorder": "Sedative, Hypnotic, or Anxiolytic Use Disorder",
+      "file": "sedative_hypnotic_or_anxiolytic_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 89.09523415565491,
+      "chapter_file": "book_chapters/127_sedative,_hypnotic,_or_anxiolytic_use_disorder.md",
+      "timestamp": "2025-10-20T16:40:16.608251"
+    },
+    {
+      "number": 128,
+      "disorder": "Selective Mutism",
+      "file": "selective_mutism",
+      "paper_count": 2000,
+      "generation_time": 89.49815845489502,
+      "chapter_file": "book_chapters/128_selective_mutism.md",
+      "timestamp": "2025-10-20T16:41:52.131777"
+    },
+    {
+      "number": 129,
+      "disorder": "Separation Anxiety Disorder",
+      "file": "separation_anxiety_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.42195081710815,
+      "chapter_file": "book_chapters/129_separation_anxiety_disorder.md",
+      "timestamp": "2025-10-20T16:43:26.582439"
+    },
+    {
+      "number": 130,
+      "disorder": "Sexual Masochism Disorder",
+      "file": "sexual_masochism_disorder",
+      "paper_count": 2000,
+      "generation_time": 86.55805253982544,
+      "chapter_file": "book_chapters/130_sexual_masochism_disorder.md",
+      "timestamp": "2025-10-20T16:44:59.154686"
+    },
+    {
+      "number": 131,
+      "disorder": "Sexual Sadism Disorder",
+      "file": "sexual_sadism_disorder",
+      "paper_count": 2000,
+      "generation_time": 84.59324765205383,
+      "chapter_file": "book_chapters/131_sexual_sadism_disorder.md",
+      "timestamp": "2025-10-20T16:46:29.767151"
+    },
+    {
+      "number": 132,
+      "disorder": "Sleep-Related Hypoventilation",
+      "file": "sleep_related_hypoventilation",
+      "paper_count": 2000,
+      "generation_time": 80.1222152709961,
+      "chapter_file": "book_chapters/132_sleep-related_hypoventilation.md",
+      "timestamp": "2025-10-20T16:47:55.906040"
+    },
+    {
+      "number": 133,
+      "disorder": "Social Anxiety Disorder",
+      "file": "social_anxiety_disorder",
+      "paper_count": 2000,
+      "generation_time": 88.76395082473755,
+      "chapter_file": "book_chapters/133_social_anxiety_disorder.md",
+      "timestamp": "2025-10-20T16:49:30.700319"
+    },
+    {
+      "number": 134,
+      "disorder": "Social (Pragmatic) Communication Disorder",
+      "file": "social_pragmatic_communication_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.82745409011841,
+      "chapter_file": "book_chapters/134_social_(pragmatic)_communication_disorder.md",
+      "timestamp": "2025-10-20T16:51:08.552724"
+    },
+    {
+      "number": 135,
+      "disorder": "Somatic Symptom Disorder",
+      "file": "somatic_symptom_disorder",
+      "paper_count": 2000,
+      "generation_time": 89.47571301460266,
+      "chapter_file": "book_chapters/135_somatic_symptom_disorder.md",
+      "timestamp": "2025-10-20T16:52:44.055457"
+    },
+    {
+      "number": 137,
+      "disorder": "Specific Phobia",
+      "file": "specific_phobia",
+      "paper_count": 2000,
+      "generation_time": 157.04939222335815,
+      "chapter_file": "book_chapters/137_specific_phobia.md",
+      "timestamp": "2025-10-20T16:57:06.316021"
+    },
+    {
+      "number": 138,
+      "disorder": "Speech Sound Disorder",
+      "file": "speech_sound_disorder",
+      "paper_count": 2000,
+      "generation_time": 77.15151286125183,
+      "chapter_file": "book_chapters/138_speech_sound_disorder.md",
+      "timestamp": "2025-10-20T16:58:29.490780"
+    },
+    {
+      "number": 139,
+      "disorder": "Stereotypic Movement Disorder",
+      "file": "stereotypic_movement_disorder",
+      "paper_count": 2000,
+      "generation_time": 89.44101405143738,
+      "chapter_file": "book_chapters/139_stereotypic_movement_disorder.md",
+      "timestamp": "2025-10-20T17:00:04.958621"
+    },
+    {
+      "number": 140,
+      "disorder": "Stimulant Intoxication",
+      "file": "stimulant_intoxication",
+      "paper_count": 2000,
+      "generation_time": 96.14999437332153,
+      "chapter_file": "book_chapters/140_stimulant_intoxication.md",
+      "timestamp": "2025-10-20T17:01:47.136233"
+    },
+    {
+      "number": 141,
+      "disorder": "Stimulant Use Disorder",
+      "file": "stimulant_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 90.53408908843994,
+      "chapter_file": "book_chapters/141_stimulant_use_disorder.md",
+      "timestamp": "2025-10-20T17:03:23.703606"
+    },
+    {
+      "number": 142,
+      "disorder": "Stimulant Withdrawal",
+      "file": "stimulant_withdrawal",
+      "paper_count": 2000,
+      "generation_time": 87.1678524017334,
+      "chapter_file": "book_chapters/142_stimulant_withdrawal.md",
+      "timestamp": "2025-10-20T17:04:56.900228"
+    },
+    {
+      "number": 149,
+      "disorder": "Tobacco Use Disorder",
+      "file": "tobacco_use_disorder",
+      "paper_count": 2000,
+      "generation_time": 84.60442757606506,
+      "chapter_file": "book_chapters/149_tobacco_use_disorder.md",
+      "timestamp": "2025-10-20T17:15:27.933335"
+    },
+    {
+      "number": 150,
+      "disorder": "Tourette’s Disorder",
+      "file": "tourettes_disorder",
+      "paper_count": 2000,
+      "generation_time": 85.88665008544922,
+      "chapter_file": "book_chapters/150_tourette’s_disorder.md",
+      "timestamp": "2025-10-20T17:16:59.841656"
+    },
+    {
+      "number": 151,
+      "disorder": "Transvestic Disorder",
+      "file": "transvestic_disorder",
+      "paper_count": 2000,
+      "generation_time": 91.65666818618774,
+      "chapter_file": "book_chapters/151_transvestic_disorder.md",
+      "timestamp": "2025-10-20T17:18:37.511687"
+    },
+    {
+      "number": 152,
+      "disorder": "Trichotillomania (Hair-Pulling Disorder)",
+      "file": "trichotillomania_hair_pulling_disorder",
+      "paper_count": 2000,
+      "generation_time": 85.12516045570374,
+      "chapter_file": "book_chapters/152_trichotillomania_(hair-pulling_disorder).md",
+      "timestamp": "2025-10-20T17:20:08.665036"
+    },
+    {
+      "number": 153,
+      "disorder": "Voyeuristic Disorder",
+      "file": "voyeuristic_disorder",
+      "paper_count": 2000,
+      "generation_time": 99.32013630867004,
+      "chapter_file": "book_chapters/153_voyeuristic_disorder.md",
+      "timestamp": "2025-10-20T17:21:54.002335"
+    }
+  ]
+}
