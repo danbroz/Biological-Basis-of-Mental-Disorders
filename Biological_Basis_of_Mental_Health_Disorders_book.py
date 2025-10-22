@@ -10,6 +10,7 @@ import google.generativeai as genai
 import json
 import os
 import time
+import re
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
@@ -51,29 +52,137 @@ def generate_apa_citation(paper):
     """
     authors = paper.get('authors', [])
     year = paper.get('year', 'n.d.')
+    # Convert year to string to avoid type mismatch issues
+    if isinstance(year, int):
+        year = str(year)
     title = paper.get('title', 'No title')
     venue = paper.get('venue', '')
     doi = paper.get('doi', '')
     
-    # Format authors
+    # Helper: convert full name to "Surname, A. B." (proper APA format)
+    def name_to_apa(full_name: str) -> str:
+        if not full_name or not full_name.strip():
+            return full_name.strip()
+        
+        # Tokenize and clean
+        raw_parts = [p for p in re.split(r"\s+", full_name.strip()) if p]
+        if not raw_parts:
+            return full_name.strip()
+        
+        # Find surname as the last token with at least 2 letters (ignoring dots and punctuation)
+        def letters_only(s: str) -> str:
+            return re.sub(r"[^A-Za-zÀ-ÿ'-]", "", s)
+        surname_idx = None
+        for i in range(len(raw_parts) - 1, -1, -1):
+            if len(letters_only(raw_parts[i])) >= 2:
+                surname_idx = i
+                break
+        if surname_idx is None:
+            # Cannot identify a valid surname; fall back to the raw name
+            return full_name.strip()
+        
+        surname = raw_parts[surname_idx].strip().strip(',')
+        given_parts = raw_parts[:surname_idx]
+        
+        # Build initials from given names (ignore punctuation-only tokens)
+        initials = []
+        for gp in given_parts:
+            clean_gp = gp.replace('.', '').strip(" ,-")
+            if not clean_gp:
+                continue
+            if '-' in clean_gp:
+                hy = [h for h in clean_gp.split('-') if h]
+                hy_inits = [h[0].upper() + '.' for h in hy if h]
+                if hy_inits:
+                    initials.append('-'.join(hy_inits))
+            else:
+                initials.append(clean_gp[0].upper() + '.')
+        
+        return f"{surname}, {' '.join(initials)}" if initials else surname
+
+    # Format authors per APA 7th with filtering to avoid single-initial-only authors
+    import re as _re
+    def initials_only(name: str) -> bool:
+        if not name:
+            return False
+        s = name.strip()
+        return _re.fullmatch(r'(?:\s*[A-Za-z]\.\s*){1,6}', s) is not None
+    def has_valid_surname(formatted: str) -> bool:
+        # formatted is like "Surname, A. B." or "Surname"
+        surname = formatted.split(',', 1)[0].strip()
+        core = _re.sub(r"[^A-Za-zÀ-ÿ'-]", "", surname)
+        # reject single-letter cores and empty
+        if len(core) < 2:
+            return False
+        # reject pure initial (e.g., "A.")
+        if _re.fullmatch(r'[A-Za-z]\.?', surname):
+            return False
+        return True
+
     if not authors:
         author_str = "Unknown"
-    elif len(authors) == 1:
-        author_str = authors[0]
-    elif len(authors) == 2:
-        author_str = f"{authors[0]}, & {authors[1]}"
-    elif len(authors) <= 20:
-        author_str = ', '.join(authors[:-1]) + f", & {authors[-1]}"
     else:
-        # 20+ authors: first 19, then ..., then last
-        author_str = ', '.join(authors[:19]) + f", ... {authors[-1]}"
-    
-    # Build citation
-    citation = f"{author_str} ({year}). {title}"
-    if venue:
-        citation += f". {venue}"
+        # Remove raw authors that are just initials like "D. S."
+        authors_clean = [a for a in authors if a and a.strip() and not initials_only(a)]
+        authors_use = authors_clean if authors_clean else authors
+        
+        # Find the first author with a proper full name (first name + surname)
+        first_valid_author = None
+        for author in authors_use:
+            if author and author.strip():
+                # Check if this author has both first name and surname
+                name_parts = [p.strip() for p in author.split() if p.strip()]
+                if len(name_parts) >= 2:  # Must have at least first name + surname
+                    # Check if the last part (surname) has at least 2 letters
+                    surname = name_parts[-1]
+                    surname_clean = _re.sub(r"[^A-Za-zÀ-ÿ'-]", "", surname)
+                    if len(surname_clean) >= 2:
+                        # Also check that it's not just initials
+                        first_name = name_parts[0]
+                        if not _re.match(r'^[A-Z]\.?$', first_name):  # Not just an initial
+                            first_valid_author = author
+                            break
+        
+        # Use the first valid author if found, otherwise use all authors
+        if first_valid_author:
+            # Reorder authors to put the valid one first
+            other_authors = [a for a in authors_use if a != first_valid_author]
+            authors_use = [first_valid_author] + other_authors
+        
+        # First pass format
+        formatted = [name_to_apa(a) for a in authors_use if a and a.strip()]
+        # Filter out entries whose surname reduces to a single initial (e.g., "A.")
+        filtered = [f for f in formatted if has_valid_surname(f)]
+        apa_authors = filtered if filtered else formatted  # fall back if all filtered out
+        if len(apa_authors) == 1:
+            author_str = apa_authors[0]
+        elif len(apa_authors) == 2:
+            author_str = f"{apa_authors[0]}, & {apa_authors[1]}"
+        elif len(apa_authors) <= 20:
+            author_str = ', '.join(apa_authors[:-1]) + f", & {apa_authors[-1]}"
+        else:
+            author_str = ', '.join(apa_authors[:19]) + f", ... {apa_authors[-1]}"
+
+    # Normalize DOI to https form when possible
+    doi_str = ''
     if doi:
-        citation += f". {doi}"
+        d = doi.strip()
+        if d.lower().startswith('10.'):
+            doi_str = f"https://doi.org/{d}"
+        elif d.lower().startswith('doi:'):
+            core = d.split(':', 1)[-1].strip()
+            doi_str = f"https://doi.org/{core}"
+        elif d.lower().startswith('http'):
+            doi_str = d
+        else:
+            doi_str = d
+
+    # Build citation (plain text APA-like)
+    citation = f"{author_str} ({year}). {title}."
+    if venue:
+        citation += f" {venue}."
+    if doi_str:
+        citation += f" {doi_str}"
     
     return citation
 
@@ -86,7 +195,7 @@ def load_disorder_papers(json_filepath):
         json_filepath: Path to disorder JSON file
         
     Returns:
-        Tuple of (papers_context_string, reference_list_string, paper_count, disorder_name)
+        Tuple of (papers_context_string, reference_list_string, reference_list_array, paper_count, disorder_name)
     """
     print(f"  📖 Loading papers from: {json_filepath.name}")
     
@@ -124,9 +233,9 @@ Abstract: {paper.get('abstract', 'No abstract available')}
         reference_parts.append(generate_apa_citation(paper))
     
     papers_context = '\n'.join(context_parts)
-    reference_list = '\n'.join([f"{i+1}. {ref}" for i, ref in enumerate(reference_parts)])
+    reference_list_str = '\n'.join([f"{i+1}. {ref}" for i, ref in enumerate(reference_parts)])
     
-    return papers_context, reference_list, len(papers), disorder_name
+    return papers_context, reference_list_str, reference_parts, len(papers), disorder_name
 
 
 def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_count):
@@ -144,9 +253,17 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
     """
     prompt = f"""You are writing a comprehensive academic chapter on the biological and neurological basis of {disorder_name}.
 
+**CRITICAL CITATION REQUIREMENTS:**
+
+⚠️ You MUST cite ONLY from the {paper_count} research papers provided below in this prompt.
+⚠️ Do NOT cite any external sources, textbooks, review articles, or other papers not in the provided list.
+⚠️ Use exact author surnames and years as they appear in the reference list below.
+⚠️ Any citation not matching a provided paper will be excluded from the final reference list.
+⚠️ Cross-check every citation against the reference list to ensure it exists.
+
 **Instructions:**
 
-1. Write a detailed, evidence-based chapter (4000-6000 words) on the biological/neurological mechanisms underlying {disorder_name}
+1. Write a detailed, evidence-based chapter (4000-6000 words) on the biological/neurological mechanisms underlying {disorder_name}. IMPORTANT: Complete ALL sections fully - do not truncate mid-sentence.
 
 2. Cover topics including:
    - Neurotransmitter systems and neuropharmacology
@@ -159,14 +276,15 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
    - Biological subtypes and heterogeneity
 
 3. **CRITICAL - Citations (THIS IS MANDATORY):**
-   - You MUST cite sources from the {paper_count} provided research papers
+   - You MUST cite sources ONLY from the {paper_count} provided research papers below
+   - Do NOT cite any papers not explicitly listed in the reference list
    - Use inline APA citations: (Author, Year) or (Author et al., Year)
    - Cite multiple papers when making broad claims: (Author1, Year1; Author2, Year2)
    - EVERY major statement, finding, or claim MUST be cited
-   - Use the exact authors and years from the reference list provided below
+   - Use the exact author surnames and years from the reference list provided below
+   - Verify each citation exists in the reference list before using it
    - Aim for 75-100+ citations throughout the chapter
    - Integrate citations naturally into the text
-   - When discussing specific findings, cite the paper number if helpful for reference
 
 4. Structure (use markdown headers):
    - ## Introduction
@@ -201,16 +319,24 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
 
 {papers_context}
 
-**COMPLETE REFERENCE LIST ({paper_count} papers - cite extensively):**
-**only cite the papers that are directly relevant to the chapter**
+**COMPLETE REFERENCE LIST ({paper_count} papers - CITE ONLY FROM THIS LIST):**
 
 {reference_list}
 
-**Now write the chapter, ensuring every claim is supported by citations from the papers above. Begin with the chapter title and proceed through all sections:**
+**FINAL REMINDERS BEFORE WRITING:**
+- ✓ Cite extensively from the papers above using APA format: (Author, Year) or (Author et al., Year)
+- ✓ ONLY cite papers from the list above - do NOT cite any external sources
+- ✓ Match author surnames and years exactly as shown in the reference list
+- ✓ The final reference list will be automatically filtered to include ONLY papers you actually cite
+- ✓ The reference list will be automatically sorted alphabetically in APA format
+- ✓ If you cite a paper not in this list, it will NOT appear in the references section
+
+**Now write the chapter, ensuring every claim is supported by citations from the papers listed above. Begin with the chapter title and proceed through all sections. CRITICAL: Complete each section fully and end with a proper conclusion - do not truncate mid-sentence.**
 """
     return prompt
 
 
+def generate_chapter_with_retry(prompt, max_retries=3):
     """
     Generate chapter with retry logic for rate limits and errors.
     
@@ -231,7 +357,7 @@ def build_chapter_prompt(disorder_name, papers_context, reference_list, paper_co
                     temperature=0.7,
                     top_p=0.95,
                     top_k=40,
-                    max_output_tokens=8192,
+                    max_output_tokens=16384,  # Increased token limit
                 )
             )
             
@@ -274,18 +400,309 @@ def save_progress(progress):
         json.dump(progress, f, indent=2, ensure_ascii=False)
 
 
-def save_chapter_file(chapter_num, disorder_name, content, reference_list):
-    """Save individual chapter to file."""
+def extract_cited_references(chapter_content, all_references):
+    """
+    Extract only the references that were actually cited in the chapter.
+    Uses flexible first-author + year matching to handle various citation formats.
+    
+    Args:
+        chapter_content: The generated chapter text
+        all_references: List of all reference strings
+        
+    Returns:
+        Alphabetically sorted list of only cited references in APA format
+    """
+    import re
+    
+    # Extract all citations from the text
+    citation_pattern = r'\(([^)]+\d{4}[a-z]?[^)]*)\)'
+    citations = re.findall(citation_pattern, chapter_content)
+    
+    # Build set of cited first-author + year combinations
+    # This is more flexible than trying to match all authors
+    cited_first_author_year = set()
+    
+    for citation in citations:
+        # Split multiple citations separated by semicolons
+        parts = [p.strip() for p in citation.split(';')]
+        
+        for part in parts:
+            # Extract year
+            year_match = re.search(r'\b(\d{4}[a-z]?)\b', part)
+            if not year_match:
+                continue
+                
+            year = year_match.group(1)
+            
+            # Extract text before year
+            text_before_year = part.split(year)[0].strip().rstrip(',').strip()
+            
+            # Handle different citation formats more flexibly
+            # Case 1: "Author et al." - extract just the surname
+            if ' et al.' in text_before_year:
+                first_author = text_before_year.split(' et al.')[0].strip()
+            # Case 2: "Author & Author" - extract first author
+            elif ' & ' in text_before_year:
+                first_author = text_before_year.split(' & ')[0].strip()
+            # Case 3: "Author, Author" - extract first author
+            elif ', ' in text_before_year:
+                first_author = text_before_year.split(', ')[0].strip()
+            # Case 4: Single author
+            else:
+                first_author = text_before_year.strip()
+            
+            # Extract just the surname (last word) for better matching
+            surname = first_author.split()[-1] if first_author else first_author
+            cited_first_author_year.add((surname.lower(), year))
+    
+    print(f"  🔍 Extracted {len(cited_first_author_year)} unique first-author + year citations")
+    
+    # Filter references using surname + year matching with improved logic
+    cited_refs = []
+    cited_refs_set = set()  # Track to avoid duplicates
+    matched_pairs = set()  # Track which citations we matched
+    
+    for ref in all_references:
+        # Remove numbering if present (look for pattern "1. " or "2. " etc. at start)
+        if re.match(r'^\d+\. ', ref):
+            ref_without_number = re.sub(r'^\d+\. ', '', ref)
+        else:
+            ref_without_number = ref
+        
+        # Skip if already added
+        if ref_without_number in cited_refs_set:
+            continue
+        
+        # Extract year from reference
+        year_in_ref_match = re.search(r'\((\d{4}[a-z]?)\)', ref_without_number)
+        if not year_in_ref_match:
+            continue
+            
+        year_in_ref = year_in_ref_match.group(1)
+        
+        # Extract author text before year
+        text_before_year = ref_without_number.split('(')[0].strip()
+        
+        # Check if any cited surname + year matches this reference
+        for cited_surname, cited_year in cited_first_author_year:
+            if cited_year == year_in_ref:
+                # Try exact match first
+                surname_pattern = r'\b' + re.escape(cited_surname) + r'\b'
+                if re.search(surname_pattern, text_before_year, re.IGNORECASE):
+                    cited_refs.append(ref_without_number)
+                    cited_refs_set.add(ref_without_number)
+                    matched_pairs.add((cited_surname, cited_year))
+                    break
+                
+                # Try fuzzy matching for abbreviated surnames
+                # Check if cited surname is a prefix of any surname in the reference
+                words_in_ref = re.findall(r'\b[A-Za-zà-ÿ]+\b', text_before_year)
+                for word in words_in_ref:
+                    if (word.lower().startswith(cited_surname.lower()) and 
+                        len(cited_surname) >= 2 and  # Avoid single letter matches
+                        len(word) > len(cited_surname)):  # Word must be longer than cited surname
+                        cited_refs.append(ref_without_number)
+                        cited_refs_set.add(ref_without_number)
+                        matched_pairs.add((cited_surname, cited_year))
+                        break
+                else:
+                    continue  # No match found, try next cited surname
+                break  # Found a match, move to next reference
+    
+    # Sort alphabetically by author (APA style)
+    cited_refs.sort(key=lambda x: x.lower())
+    
+    # Re-number the references
+    numbered_refs = [f"{i+1}. {ref}" for i, ref in enumerate(cited_refs)]
+    
+    # Report statistics
+    unmatched_count = len(cited_first_author_year) - len(matched_pairs)
+    
+    if cited_refs:
+        print(f"  📚 Filtered references: {len(all_references)} → {len(cited_refs)} cited papers")
+        if unmatched_count > 0:
+            print(f"  ⚠️  Warning: {unmatched_count} citations not found in provided papers (may be hallucinated)")
+    else:
+        print(f"  ⚠️  Warning: No citations matched. Including all {len(all_references)} references.")
+        numbered_refs = [f"{i+1}. {ref}" for i, ref in enumerate(all_references)]
+    
+    return numbered_refs
+
+
+def filter_references_and_clean_text(chapter_content, all_references):
+    """
+    Post-process the chapter to generate a validated reference list from in-text citations.
+    Only includes references that are actually cited in the text.
+    - Extract cited (surname, year) pairs from the text
+    - Match against provided references using precise matching
+    - Keep the text as-is and build a reference list with only cited sources
+
+    Args:
+        chapter_content: The generated chapter text
+        all_references: List of all reference strings (APA format)
+
+    Returns:
+        Tuple (cleaned_content, numbered_refs)
+    """
+    import re
+    import unicodedata
+
+    # Always operate only on the main body; ignore any existing References section
+    main_body = chapter_content.split("\n## References", 1)[0]
+
+    # Step 1: Extract all parenthetical citations from the main body
+    citation_pattern = r'\(([^)]+\d{4}[a-z]?[^)]*)\)'
+    citations = re.findall(citation_pattern, main_body)
+
+    # Step 2: Build set of cited first-author + year combinations from text
+    cited_first_author_year = set()
+    for citation in citations:
+        parts = [p.strip() for p in citation.split(';')]
+        for part in parts:
+            year_match = re.search(r'\b(\d{4}[a-z]?)\b', part)
+            if not year_match:
+                continue
+            year = year_match.group(1)
+            text_before_year = part.split(year)[0].strip().rstrip(',').strip()
+            if ' et al.' in text_before_year:
+                first_author = text_before_year.split(' et al.')[0].strip()
+            elif ' & ' in text_before_year:
+                first_author = text_before_year.split(' & ')[0].strip()
+            elif ', ' in text_before_year:
+                first_author = text_before_year.split(', ')[0].strip()
+            else:
+                first_author = text_before_year.strip()
+            surname = first_author.split()[-1] if first_author else first_author
+            if surname:
+                cited_first_author_year.add((surname.lower(), year))
+
+    # Normalization helpers for robust matching
+    def normalize_token(s: str) -> str:
+        if not s:
+            return ''
+        s = s.strip().lower()
+        s = ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+        s = re.sub(r"[^a-z0-9\- ]+", "", s)
+        return s
+
+    # Step 3: Build precise reference matches
+    cited_refs = []
+    cited_refs_set = set()
+
+    def first_author_valid(apa_ref_text: str) -> bool:
+        # Extract the author segment before the year
+        first_segment = apa_ref_text.split('(', 1)[0].strip()
+        if not first_segment:
+            return False
+        
+        # Check if it has the APA format "Surname, A. B." or just "Surname"
+        if ',' in first_segment:
+            # Has APA format - check for proper surname and initials
+            parts = first_segment.split(',', 1)
+            if len(parts) < 2:
+                return False
+            
+            surname = parts[0].strip()
+            initials_part = parts[1].strip()
+            
+            # Surname must be at least 2 letters
+            surname_clean = re.sub(r"[^A-Za-zÀ-ÿ'-]", "", surname)
+            if len(surname_clean) < 2:
+                return False
+            
+            # Must have at least one initial (letter followed by period)
+            if not re.search(r'[A-Z]\.', initials_part):
+                return False
+        else:
+            # No comma - check if it's a proper surname (not just initials)
+            surname_clean = re.sub(r"[^A-Za-zÀ-ÿ'-]", "", first_segment)
+            if len(surname_clean) < 2:
+                return False
+            
+            # Reject if it's just initials (like "D. S.")
+            if re.match(r'^[A-Z]\.?\s*[A-Z]\.?$', first_segment.strip()):
+                return False
+        
+        return True
+
+    # For each reference, check if it matches any cited author+year combination
+    for ref in all_references:
+        # Remove numbering if present
+        if re.match(r'^\d+\. ', ref):
+            ref_text = re.sub(r'^\d+\. ', '', ref)
+        else:
+            ref_text = ref
+        
+        # Extract year from reference
+        year_match = re.search(r'\((\d{4}[a-z]?)\)', ref_text)
+        if not year_match:
+            continue
+        ref_year = year_match.group(1)
+        
+        # Extract author text before year
+        authors_text = ref_text.split('(')[0].strip()
+        
+        # Check if this reference matches any cited author+year
+        for cited_surname, cited_year in cited_first_author_year:
+            if cited_year != ref_year:
+                continue
+            
+            # Normalize for comparison
+            norm_cited_surname = normalize_token(cited_surname)
+            ref_words = re.findall(r'\b[A-Za-zà-ÿ\-]+\b', authors_text)
+            norm_ref_words = [normalize_token(w) for w in ref_words]
+            
+            # Check for exact match or prefix match
+            match_found = False
+            if norm_cited_surname in norm_ref_words:
+                match_found = True
+            else:
+                # Check for prefix/variant matches (handles Mc/Mac, etc.)
+                for w in norm_ref_words:
+                    if (norm_cited_surname and len(norm_cited_surname) >= 2 and 
+                        (w.startswith(norm_cited_surname) or norm_cited_surname.startswith(w))):
+                        match_found = True
+                        break
+            
+            if match_found:
+                # Only add if it's a valid reference and not already included
+                if first_author_valid(ref_text) and ref_text not in cited_refs_set:
+                    cited_refs.append(ref_text)
+                    cited_refs_set.add(ref_text)
+                break  # Found a match for this reference, move to next reference
+
+    # Sort APA-style (alphabetical)
+    cited_refs.sort(key=lambda x: x.lower())
+    numbered_refs = [f"{i}. {ref}" for i, ref in enumerate(cited_refs, 1)]
+
+    return main_body, numbered_refs
+
+
+def save_chapter_file(chapter_num, disorder_name, content, all_references_list):
+    """Save individual chapter to file with only cited references.
+    Ensures 100% non-hallucinated citations by removing unmatched citations from text.
+    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    
+    # Convert reference list string to list if needed
+    if isinstance(all_references_list, str):
+        all_refs = [line.split('. ', 1)[-1] for line in all_references_list.split('\n') if line.strip()]
+    else:
+        all_refs = all_references_list
+    
+    # Strip any existing References section from incoming content
+    base_content = content.split("\n## References", 1)[0]
+    # Clean text from hallucinated citations and filter references
+    cleaned_content, cited_references = filter_references_and_clean_text(base_content, all_refs)
     
     filename = f"{chapter_num:03d}_{disorder_name.lower().replace(' ', '_')}.md"
     filepath = os.path.join(OUTPUT_DIR, filename)
     
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(f"# Chapter {chapter_num}: {disorder_name}\n\n")
-        f.write(content)
+        f.write(cleaned_content)
         f.write("\n\n## References\n\n")
-        f.write(reference_list)
+        f.write('\n'.join(cited_references))
     
     print(f"  💾 Saved chapter to: {filepath}")
     return filepath
@@ -324,10 +741,10 @@ def generate_book():
         
         try:
             # Load ALL papers with FULL content
-            papers_context, reference_list, paper_count, disorder_name = load_disorder_papers(disorder_file)
+            papers_context, reference_list_str, reference_parts, paper_count, disorder_name = load_disorder_papers(disorder_file)
             
             # Build comprehensive prompt
-            prompt = build_chapter_prompt(disorder_name, papers_context, reference_list, paper_count)
+            prompt = build_chapter_prompt(disorder_name, papers_context, reference_list_str, paper_count)
             
             print(f"  📊 Prompt size: ~{len(prompt):,} characters")
             print(f"  🎯 Target: 4000-6000 words with 75+ citations")
@@ -337,8 +754,8 @@ def generate_book():
             chapter_content = generate_chapter_with_retry(prompt)
             chapter_time = time.time() - chapter_start
             
-            # Save chapter file
-            chapter_file = save_chapter_file(idx, disorder_name, chapter_content, reference_list)
+            # Save chapter file (with filtered and sorted references)
+            chapter_file = save_chapter_file(idx, disorder_name, chapter_content, reference_parts)
             
             # Update progress
             chapter_info = {
@@ -426,7 +843,8 @@ def main():
     print(f"⏱️  Rate limit delay: {RATE_LIMIT_DELAY}s between chapters")
     print(f"💰 Cost: FREE (Gemini API Free Tier)")
     
-    input("\n▶️  Press Enter to start generation (or Ctrl+C to cancel)...")
+    # input("\n▶️  Press Enter to start generation (or Ctrl+C to cancel)...")
+    print("\n▶️  Starting generation...\n")
     
     try:
         generate_book()
